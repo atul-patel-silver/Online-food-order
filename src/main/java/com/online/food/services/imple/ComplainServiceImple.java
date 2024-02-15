@@ -46,5 +46,10 @@ public class ComplainServiceImple implements ComplainService {
         return this.complainRepo.findAll(pageable);
     }
 
+    @Override
+    public List<Complain> findByWithRestaurantId(Long restaurantId) {
+        return this.complainRepo.findByWithRestaurantId(restaurantId);
+    }
+
 
 }

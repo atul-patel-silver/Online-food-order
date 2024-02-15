@@ -19,4 +19,6 @@ public interface ComplainService {
 
     Page<Complain> findByPainationWithRestaurantId(Long restaurantId,Pageable pageable);
     Page<Complain> findAllBYPagination(Pageable pageable);
+
+    List<Complain> findByWithRestaurantId(Long restaurantId);
 }

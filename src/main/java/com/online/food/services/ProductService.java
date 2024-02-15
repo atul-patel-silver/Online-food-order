@@ -20,4 +20,7 @@ public interface ProductService {
     Page<Product> findByPagination(Pageable pageable);
 
     Page<Product> findProductForRestaurant(Long restaurantId,Pageable pageable);
+
+    //not a pagination include
+    List<Product> findProductsForRestaurant(Long restaurantId);
 }

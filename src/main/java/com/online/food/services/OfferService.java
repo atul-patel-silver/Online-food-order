@@ -18,4 +18,6 @@ public interface OfferService {
     Page<Offer> findByRestaurantID(Long restaurantId, Pageable pageable);
 
     Page<Offer> findAllWithPagination(Pageable pageable);
+
+    List<Offer> findByOfferRestaurantId(Long restaurantId);
 }

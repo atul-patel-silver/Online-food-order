@@ -42,4 +42,9 @@ public class OfferServiceImple implements OfferService {
     public Page<Offer> findAllWithPagination(Pageable pageable) {
         return this.offerRepo.findAll(pageable);
     }
+
+    @Override
+    public List<Offer> findByOfferRestaurantId(Long restaurantId) {
+        return this.offerRepo.findByOfferRestaurantId(restaurantId);
+    }
 }

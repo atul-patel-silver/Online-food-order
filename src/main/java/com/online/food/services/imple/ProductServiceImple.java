@@ -42,4 +42,9 @@ public class ProductServiceImple implements ProductService {
     public Page<Product> findProductForRestaurant(Long restaurantId, Pageable pageable) {
         return this.productRepo.findProductForRestaurant(restaurantId,pageable);
     }
+
+    @Override
+    public List<Product> findProductsForRestaurant(Long restaurantId) {
+        return this.productRepo.findProductsForRestaurant(restaurantId);
+    }
 }
