@@ -525,7 +525,8 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $(".button-reply").click(function () {
-        $(".reply-form").show();
+        var complainId = $(this).data('complain_id');
+        $("#reply-"+complainId).show();
     });
 
 });

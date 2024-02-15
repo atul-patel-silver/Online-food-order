@@ -166,12 +166,12 @@
 											<div th:if="${complain.reply != null}" class="text-muted" th:text="${complain.reply}">
 												45-89-96
 											</div>
-											<div class="alert alert-primary button-reply" th:if="${complain.reply== null}"  style="width: 10px;
+											<div class="alert alert-primary button-reply" th:data-complain_id="${complain.complainId}" th:if="${complain.reply== null}"  style="width: 10px;
       													  height: 15px; cursor: pointer; border-radius: 50%;">
 
 											</div>
 
-											<div class="row reply-form" style="display:none;" >
+											<div th:id="'reply-'+${complain.complainId}" class="row reply-form" style="display:none;" >
 												<form class="reply-form-data col" >
 													<input type="hidden" name="complainId" th:value="${complain.complainId}">
 													<input type="text" name="replydes" class="form-control" placeholder="Enter Reply" aria-label="Last name">

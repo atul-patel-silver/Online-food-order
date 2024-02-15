@@ -109,7 +109,7 @@ public class AdminController {
     public String manageCityPage(@PathVariable("page") int page, Model model) {
 
         try {
-            Pageable pageable = PageRequest.of(page, 5);
+            Pageable pageable = PageRequest.of(page, 1);
             Page<City> cities = this.cityService.findAllCityByPagination(pageable);
 
             model.addAttribute("cities", cities.getContent());
